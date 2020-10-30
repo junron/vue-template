@@ -70,6 +70,7 @@ export default Vue.extend({
     const user = localStorage.getItem("user");
     if (!user) {
       this.$router.push("sign_in");
+      return;
     }
     this.$store.state.user = JSON.parse(user) as User;
   },

@@ -3,10 +3,13 @@ module.exports = {
   env: {
     node: true,
   },
+  parser: "@typescript-eslint/parser",
+  plugins: [
+    "@typescript-eslint"
+  ],
   extends: [
-    "plugin:vue/essential",
-    "@vue/typescript",
-    "@vue/typescript/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   parserOptions: {
     ecmaVersion: 2020,

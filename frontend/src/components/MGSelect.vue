@@ -34,7 +34,7 @@ export default Vue.extend({
     mentorGroups() {
       const out = [];
       for (let i = 1; i < (this.$data.year > 2 ? 8 : 7); i++) {
-        out.push(`${this.$data.year}0${i}`)
+        out.push(`${this.$data.year}0${i}`);
       }
       return out;
     }
