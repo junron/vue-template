@@ -5,6 +5,7 @@ import SignIn from "@/views/SignIn.vue";
 
 Vue.use(VueRouter);
 
+// Routes map urls to views
 const routes: Array<RouteConfig> = [
   {
     path: "/",

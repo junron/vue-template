@@ -9,7 +9,7 @@
       thumb-label
       ticks="always"
     />
-<!--    Use $emit to pass data to parent -->
+    <!--    Use $emit to pass data to parent -->
     <v-autocomplete
       @input="$emit('update', $data.mentorGroup)"
       v-model="mentorGroup"
@@ -30,6 +30,12 @@ export default Vue.extend({
       mentorGroup:"",
     };
   },
+  /*
+   Often, data depends on other data
+   When you reference other data (eg year) in a computer component, Vue recomputes the component
+   when the referenced data changes
+   This allows mentorGroups to be dynamically updated when the user chooses another year
+  */
   computed: {
     mentorGroups() {
       const out = [];

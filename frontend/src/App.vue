@@ -18,6 +18,7 @@
       <v-list
         dense
         nav>
+        <!--    <router-link> navigates to the route specified when clicked   -->
         <router-link v-for="item in routes"
                      :to="item.route"
                      @click="drawerShown = false"
@@ -51,6 +52,7 @@
     </v-app-bar>
 
     <v-content>
+      <!--   <router-view/> is where the view corresponding to the current route will be rendered   -->
       <router-view/>
     </v-content>
   </v-app>
@@ -69,6 +71,7 @@ export default Vue.extend({
   mounted() {
     const user = localStorage.getItem("user");
     if (!user) {
+      // Use this.$router.push to programmatically navigate to routes
       this.$router.push("sign_in");
       return;
     }
