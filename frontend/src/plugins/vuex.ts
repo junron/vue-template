@@ -6,10 +6,7 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    user: null
-  } as {
-    user: User | null;
-  },
+  }
 });
 
 export default store;

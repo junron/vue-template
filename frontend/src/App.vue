@@ -46,7 +46,7 @@
       <v-app-bar-nav-icon v-if="user != null"
                           @click="drawerShown = !drawerShown"/>
       <v-toolbar-title>
-        Vue App
+        _Vue-Template
       </v-toolbar-title>
     </v-app-bar>
 
@@ -58,22 +58,16 @@
 
 <script lang="ts">
 import Vue from "vue";
-import User from "@/types/user";
 
 export default Vue.extend({
   name: "App",
   components: {},
   data: () => ({
     drawerShown: false,
-  }),
-  mounted() {
-    const user = localStorage.getItem("user");
-    if (!user) {
-      this.$router.push("sign_in");
-      return;
+    user: {
+      name: "John",
     }
-    this.$store.state.user = JSON.parse(user) as User;
-  },
+  }),
   computed: {
     routes(): Array<{
       name: string;
@@ -89,9 +83,6 @@ export default Vue.extend({
         },
       ];
     },
-    user(): User | null {
-      return this.$store.state.user;
-    }
   }
 });
 </script>

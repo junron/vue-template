@@ -1,0 +1,25 @@
+version: 2
+
+networks:
+  primary:
+    external:
+      name: primary
+  _Vue-Template:
+    external: false
+
+services:
+  web:
+    image: registry.nush.app/_Vue-Template
+    restart: always
+    command: "npm start"
+    networks:
+    - primary
+    - _Vue-Template
+    expose:
+    - "3000"
+    labels:
+    - "traefik.enable=true"
+    - "traefik.http.routers.uni-db.rule=Host(`_Vue-Template.nush.app`)"
+    - "traefik.http.routers.uni-db.entrypoints=https"
+    - "traefik.http.routers.uni-db.tls=true"
+    - "traefik.http.routers.uni-db.tls.certresolver=tlsresolver"
