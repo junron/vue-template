@@ -18,7 +18,7 @@
    Open either of the URLs in a browser to access the app.
    Changes that you make should be automatically reflected.
 
-### Project structure
+## Project structure
 - `.eslintrc.js`: Configures [eslint](https://eslint.org/) to enforce code formatting
 - `tsconfig.js`: Configures TypeScript compile options
 - `package.json`: Specifies project dependencies.
@@ -36,13 +36,13 @@
 - `SignIn.vue`: Page/View
 - `MgSelect.vue`: Component
 
-### Libraries
+## Libraries
 - [Vue](https://vuejs.org/)
 - [Vue router](https://router.vuejs.org/): Handles navigation
 - [Vuetify](https://vuetifyjs.com/en/): Material Design UI components library
 - [Vuex](https://vuex.vuejs.org/): Global state management
 
-### Deployment
+## Deployment
 To create an optimized build, run
 ```
 npm run build
