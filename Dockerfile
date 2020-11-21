@@ -1,10 +1,10 @@
 FROM node:12-alpine
 
-RUN adduser -S vue
-USER vue
-RUN mkdir /home/vue
-WORKDIR /home/vue
-COPY --chown=vue:root . .
+RUN adduser -S _Vue-Template
+USER _Vue-Template
+RUN mkdir /home/_Vue-Template
+WORKDIR /home/_Vue-Template
+COPY --chown=_Vue-Template:root . .
 WORKDIR backend
 
 RUN npm ci
